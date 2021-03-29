@@ -5,31 +5,32 @@ import home1 from "../img/home1.png";
 import { About, Hide, Description, Image } from "../styles";
 //framer motion
 import { motion } from "framer-motion";
+import { titleAnimation, fadeAnimation, fotoAnimation } from "./../animation";
 const AboutSection = () => {
   return (
     <About>
       <Description>
         <div className="title">
           <Hide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={titleAnimation}>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2 variants={titleAnimation}>
               your <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>true.</h2>
+            <motion.h2 variants={titleAnimation}>true.</motion.h2>
           </Hide>
         </div>
-        <p>
+        <motion.p variants={fadeAnimation}>
           Contact us for any photograph or videography idead that you have. We
           have professionals with amazing skills
-        </p>
-        <button>Contact us</button>
+        </motion.p>
+        <motion.button variants={fadeAnimation}>Contact us</motion.button>
       </Description>
       <Image>
-        <img src={home1} alt="some image" />
+        <motion.img src={home1} alt="some image" variants={fotoAnimation} />
       </Image>
     </About>
   );
