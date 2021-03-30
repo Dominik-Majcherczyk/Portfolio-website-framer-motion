@@ -5,7 +5,7 @@ import { MovieState } from "../movieState";
 //animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
-
+import ScrollTop from "./../components/ScrollTop";
 const MovieDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
@@ -20,6 +20,7 @@ const MovieDetail = () => {
 
   return (
     <>
+      <ScrollTop />
       {movie && (
         <Details
           variants={pageAnimation}

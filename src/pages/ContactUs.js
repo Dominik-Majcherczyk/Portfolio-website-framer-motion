@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { pageAnimation, titleAnimation } from "../animation";
 import styled from "styled-components";
+import ScrollTop from "./../components/ScrollTop";
 const ContactUs = () => {
   return (
     <ContactStyle
@@ -12,6 +13,7 @@ const ContactUs = () => {
       exit="exit"
       style={{ background: "#fff" }}
     >
+      <ScrollTop />
       <Title>
         <Hide>
           <motion.h2 variants={titleAnimation}>Get In Touch</motion.h2>
