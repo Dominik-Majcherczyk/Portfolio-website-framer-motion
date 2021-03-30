@@ -55,3 +55,12 @@ export const sliderContainer = {
     transition: { staggerChildren: 0.1, ease: "easeOut" },
   },
 };
+
+export const scrollAnimation = {
+  hidden: { opacity: 0, x: -400, transition: { duration: 2 } },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1 },
+  },
+};
