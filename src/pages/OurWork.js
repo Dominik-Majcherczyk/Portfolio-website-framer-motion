@@ -20,6 +20,8 @@ import { useScroll } from "../components/useScroll";
 const OurWork = () => {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
+  const [element3, controls3] = useScroll();
+
   return (
     <Work
       variants={pageAnimation}
@@ -34,7 +36,13 @@ const OurWork = () => {
         <Frame3 variants={sliderAnimation}></Frame3>
         <Frame4 variants={sliderAnimation}></Frame4>
       </motion.div>
-      <Movie>
+
+      <Movie
+        ref={element}
+        variants={fadeAnimation}
+        animate={controls}
+        initial="hidden"
+      >
         <motion.h2 variants={fadeAnimation}>The Athlete</motion.h2>
         <motion.div variants={lineAnimation} className="line"></motion.div>
         <Hide>
@@ -43,10 +51,11 @@ const OurWork = () => {
           </Link>
         </Hide>
       </Movie>
+
       <Movie
-        ref={element}
+        ref={element2}
         variants={fadeAnimation}
-        animate={controls}
+        animate={controls2}
         initial="hidden"
       >
         <h2>The Racer</h2>
@@ -56,7 +65,13 @@ const OurWork = () => {
           <img src={theracer} alt="theracer" />
         </Link>
       </Movie>
-      <Movie>
+
+      <Movie
+        ref={element3}
+        variants={fadeAnimation}
+        animate={controls3}
+        initial="hidden"
+      >
         <h2>Good Times</h2>
         <div className="line"></div>
 
